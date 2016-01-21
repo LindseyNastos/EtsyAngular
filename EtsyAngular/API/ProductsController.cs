@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EtsyAngular.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,11 +10,17 @@ namespace EtsyAngular.API
 {
     public class ProductsController : ApiController
     {
+        private IProductServices _service;
 
-        // GET: api/Products
-        public IEnumerable<string> Get()
+        public ProductsController(IProductServices service)
         {
-            return new string[] { "value1", "value2" };
+            this._service = service;
+        }
+        // GET: api/Products
+        public IHttpActionResult Get()
+        {
+            var allProducts = _service.ListProducts();
+            return Ok(allProducts);
         }
 
         // GET: api/Products/5

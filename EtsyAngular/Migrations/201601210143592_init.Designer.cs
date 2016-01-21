@@ -13,7 +13,7 @@ namespace EtsyAngular.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201601050520564_init"; }
+            get { return "201601210143592_init"; }
         }
         
         string IMigrationMetadata.Source

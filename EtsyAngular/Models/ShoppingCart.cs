@@ -11,16 +11,13 @@ namespace EtsyAngular.Models
         public ICollection<CartItem> Items { get; set; }
         public decimal SubTotal { get; set; }
         public decimal FinalTotal { get; set; }
-        public decimal CalculateTotal() {
-            var sum = 0m;
+        public void CalculateTotal() {
             foreach (var item in Items) {
-                sum += item.Price;
+                this.FinalTotal += item.Price;
             }
-            return sum;
         }
         public ShoppingCart()
-        {
-            this.SubTotal = this.CalculateTotal();
+        { 
             this.FinalTotal = this.SubTotal * 0.08m;
         }
     }

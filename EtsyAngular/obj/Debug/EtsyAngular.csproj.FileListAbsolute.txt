@@ -62,5 +62,15 @@ C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Deb
 C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.pdb
 C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.Migrations.init.resources
 C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.csproj.GenerateResource.Cache
-C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.csprojResolveAssemblyReference.cache
 C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.Migrations.two.resources
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.Migrations.three.resources
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\obj\Debug\EtsyAngular.csprojResolveAssemblyReference.cache
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.dll
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.Web.Common.dll
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.Web.WebApi.dll
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.Web.WebApi.WebHost.dll
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\WebActivatorEx.dll
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.xml
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.Web.Common.xml
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.Web.WebApi.xml
+C:\Users\L\Documents\Visual Studio 2013\Projects\EtsyAngular\EtsyAngular\bin\Ninject.Web.WebApi.WebHost.xml

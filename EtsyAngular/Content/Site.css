@@ -1,5 +1,4 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -18,4 +17,11 @@ textarea {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
+}
+
+#etsyLogo {
+    font-family: serif;
+    color: #f45800;
+    font-size: 40px;
+    font-weight:600;
 }

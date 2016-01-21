@@ -25,12 +25,14 @@ namespace EtsyAngular.Migrations
                         Name = c.String(),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Color = c.String(),
-                        Size = c.Int(nullable: false),
+                        Size = c.String(),
                         Description = c.String(),
                         NumAvailable = c.Int(nullable: false),
                         NumFaves = c.Int(nullable: false),
                         NumReviews = c.Int(nullable: false),
                         ShippingInfo = c.String(),
+                        Handmade = c.Boolean(nullable: false),
+                        ShipsFrom = c.String(),
                         Seller_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
@@ -60,6 +62,7 @@ namespace EtsyAngular.Migrations
                         Id = c.String(nullable: false, maxLength: 128),
                         DisplayName = c.String(),
                         Image = c.String(),
+                        IsSeller = c.Boolean(nullable: false),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -94,15 +97,16 @@ namespace EtsyAngular.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Quantity = c.Int(nullable: false),
+                        Size = c.String(),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Cart_Id = c.Int(),
                         Product_Id = c.Int(),
-                        ShoppingCart_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.ShoppingCarts", t => t.Cart_Id)
                 .ForeignKey("dbo.Products", t => t.Product_Id)
-                .ForeignKey("dbo.ShoppingCarts", t => t.ShoppingCart_Id)
-                .Index(t => t.Product_Id)
-                .Index(t => t.ShoppingCart_Id);
+                .Index(t => t.Cart_Id)
+                .Index(t => t.Product_Id);
             
             CreateTable(
                 "dbo.AspNetUserClaims",
@@ -164,15 +168,15 @@ namespace EtsyAngular.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUsers", "Cart_Id", "dbo.ShoppingCarts");
-            DropForeignKey("dbo.CartItems", "ShoppingCart_Id", "dbo.ShoppingCarts");
             DropForeignKey("dbo.CartItems", "Product_Id", "dbo.Products");
+            DropForeignKey("dbo.CartItems", "Cart_Id", "dbo.ShoppingCarts");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
-            DropIndex("dbo.CartItems", new[] { "ShoppingCart_Id" });
             DropIndex("dbo.CartItems", new[] { "Product_Id" });
+            DropIndex("dbo.CartItems", new[] { "Cart_Id" });
             DropIndex("dbo.AspNetUsers", new[] { "Cart_Id" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.Reviews", new[] { "Product_Id" });

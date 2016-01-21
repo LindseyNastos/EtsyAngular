@@ -54,6 +54,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi.WebHost">
+      <HintPath>..\packages\Ninject.Web.WebApi.WebHost.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -113,6 +125,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -171,6 +186,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -209,13 +225,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\GenericRepository.cs" />
-    <Compile Include="Migrations\201601050520564_init.cs" />
-    <Compile Include="Migrations\201601050520564_init.Designer.cs">
-      <DependentUpon>201601050520564_init.cs</DependentUpon>
+    <Compile Include="Migrations\201601210143592_init.cs" />
+    <Compile Include="Migrations\201601210143592_init.Designer.cs">
+      <DependentUpon>201601210143592_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601120429505_two.cs" />
-    <Compile Include="Migrations\201601120429505_two.Designer.cs">
-      <DependentUpon>201601120429505_two.cs</DependentUpon>
+    <Compile Include="Migrations\201601210205430_two.cs" />
+    <Compile Include="Migrations\201601210205430_two.Designer.cs">
+      <DependentUpon>201601210205430_two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601210207105_three.cs" />
+    <Compile Include="Migrations\201601210207105_three.Designer.cs">
+      <DependentUpon>201601210207105_three.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -229,10 +249,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\IProductServices.cs" />
     <Compile Include="Services\ProductServices.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\AJSViews\GETRIDOFTHISVIEW.html" />
     <Content Include="Angular\AJSViews\Home.html" />
     <Content Include="Angular\AJSViews\User\Details.html" />
     <Content Include="Angular\AJSViews\User\ListByCategory.html" />
@@ -312,7 +334,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Angular\AJSServices\" />
     <Folder Include="Angular\AJSViews\Admin\" />
     <Folder Include="Angular\AJSViews\Seller\" />
     <Folder Include="App_Data\" />
@@ -324,6 +345,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="Angular\AJSControllers\MainController.ts" />
     <TypeScriptCompile Include="Angular\AJSControllers\ProductsController.ts" />
+    <TypeScriptCompile Include="Angular\AJSServices\ProductServices.ts" />
     <TypeScriptCompile Include="Angular\EtsyApp.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -335,11 +357,14 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601050520564_init.resx">
-      <DependentUpon>201601050520564_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601210143592_init.resx">
+      <DependentUpon>201601210143592_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601120429505_two.resx">
-      <DependentUpon>201601120429505_two.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601210205430_two.resx">
+      <DependentUpon>201601210205430_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601210207105_three.resx">
+      <DependentUpon>201601210207105_three.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

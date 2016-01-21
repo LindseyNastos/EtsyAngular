@@ -10,14 +10,19 @@ namespace Etsy {
                 controller: Etsy.MainController.HomeController,
                 controllerAs: 'controller'
             })
-            .when('/list/:string', {
-                templateUrl: "Angular/AJSViews/User/ListByCategory.html",
+            .when('/list', {
+                templateUrl: "Angular/AJSViews/GETRIDOFTHISVIEW.html",
                 controller: Etsy.ProductControllers.ProductListController,
                 controllerAs: 'controller'
             })
+            //.when('/list/:string', {
+            //    templateUrl: "Angular/AJSViews/User/ListByCategory.html",
+            //    controller: Etsy.ProductControllers.ProductListController,
+            //    controllerAs: 'controller'
+            //})
             .when('/details/:id', {
                 templateUrl: "Angular/AJSViews/User/Details.html",
-                controller: Etsy.ProductControllers.ProductDetailController,
+                controller: Etsy.ProductControllers.ProductDetailsController,
                 controllerAs: 'controller'
             })
             .otherwise({ redirectTo: '/' });
