@@ -29,6 +29,4 @@ namespace Etsy {
 
         $locationProvider.html5Mode(true);
     });
-
-
 }

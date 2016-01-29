@@ -16,13 +16,13 @@ namespace EtsyAngular.Models
             this.Material = new List<string>();
         }
         public int Id { get; set; }
-        public string SellerId { get; set; }
+        public string SellerId { get; set; } 
         public ApplicationUser Seller { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public ICollection<string> Images { get; set; }
         public ICollection<string> ColorOptions { get; set; }
-        public string Color { get; set; }
+        public string Color { get; set; } 
         public ICollection<string> SizeOptions { get; set; }   
         public string Size { get; set; }
         public string Description { get; set; }

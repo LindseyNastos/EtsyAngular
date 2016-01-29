@@ -31,7 +31,7 @@ namespace EtsyAngular.API
 
         // POST: api/Products
         public void Post([FromBody]string value)
-        {
+        {  
         }
 
         // PUT: api/Products/5
