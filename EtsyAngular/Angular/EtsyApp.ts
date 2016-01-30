@@ -1,6 +1,5 @@
 ﻿/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
 
-
 namespace Etsy {
 
     angular.module("EtsyApp", ['ngRoute', 'ngResource']).config(($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) => {

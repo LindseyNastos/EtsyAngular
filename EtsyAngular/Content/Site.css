@@ -132,21 +132,40 @@ display: block;
 }
 
 #mainPagePic {
-    background-image: url('Images/Sparkles.jpg');
-    height:400px;
-    width:100%;
+    /*background-image: url('Images/Sparkles.jpg');*/
+    background-image: url('Images/Neclaces_opt.jpg');
+    height: 400px;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
-#mainPagePic .container h1 {
-    color: #fff;
-    padding: 100px 0 20px;
+
+#mainPagePic .container div div h1 {
+    color: white;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
     font-family: Georgia, serif;
     font-size: 42px;
     font-weight: 500;
     line-height: 1.3em;
-    padding: 100px 0 20px 50px;
+    padding: 90px 0 20px 0px;
     width: 560px;
 }
+
+    #mainPagePic #shopFeatureWrap {
+        background: #000;
+        filter: alpha(opacity=40);
+        background-color: rgba(0, 0, 0, 0.4);
+        min-height: 100px;
+        margin-top: 51px;
+    }
+
+/*
+To make image resize with window:    
+.test {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    max-width:100%;
+    height: auto !important;
+}*/
