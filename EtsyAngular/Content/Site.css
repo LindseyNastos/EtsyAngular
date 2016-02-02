@@ -160,6 +160,28 @@ display: block;
         margin-top: 51px;
     }
 
+#shopFeatureContainer {
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+    margin: -35px auto;
+    max-width: 980px;
+    width: 980px;
+    margin: 0 auto;
+}
+
+    #shopFeatureContainer a img {
+        border-radius: 60px;
+        float: left;
+        height: 60px;
+        width: 60px;
+        margin-top: 12px;;
+        background: transparent;
+    }
+
+
+
+
 /*
 To make image resize with window:    
 .test {
