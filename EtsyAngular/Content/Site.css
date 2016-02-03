@@ -179,9 +179,28 @@ display: block;
         background: transparent;
     }
 
+    #shopFeatureContainer ul {
+        float: right;
+        list-style-type: none;
+    }
 
+#sellerName {
+    float: left;
+    font-family: Georgia, serif;
+    color:white;
+    font-weight:500;
+    font-size:14px;
+    margin-left:8px;
+    text-align:left;
+    margin-top:20px;
+}
 
-
+#shopFeatureThumbnails li  {
+    border-radius: 3px;
+    border: 1px solid #ececec;
+    float: left;
+    margin-right: 6px;
+}
 /*
 To make image resize with window:    
 .test {
