@@ -1,3 +1,40 @@
+/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
+var Etsy;
+(function (Etsy) {
+    angular.module("EtsyApp", ['ngRoute', 'ngResource']).config(function ($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/', {
+            templateUrl: "Angular/AJSViews/Home.html",
+            controller: Etsy.MainController.HomeController,
+            controllerAs: 'controller'
+        })
+            .when('/list', {
+            templateUrl: "Angular/AJSViews/GETRIDOFTHISVIEW.html",
+            controller: Etsy.ProductControllers.ProductListController,
+            controllerAs: 'controller'
+        })
+            .when('/details/:id', {
+            templateUrl: "Angular/AJSViews/User/Details.html",
+            controller: Etsy.ProductControllers.ProductDetailsController,
+            controllerAs: 'controller'
+        })
+            .otherwise({ redirectTo: '/' });
+        $locationProvider.html5Mode(true);
+    });
+})(Etsy || (Etsy = {}));
+/// <reference path="angular/etsyapp.ts" />
+var Etsy;
+(function (Etsy) {
+    var MainController;
+    (function (MainController) {
+        var HomeController = (function () {
+            function HomeController() {
+            }
+            return HomeController;
+        })();
+        MainController.HomeController = HomeController;
+    })(MainController = Etsy.MainController || (Etsy.MainController = {}));
+})(Etsy || (Etsy = {}));
 var Etsy;
 (function (Etsy) {
     var ProductControllers;
@@ -62,4 +99,30 @@ var Etsy;
         ProductControllers.DeleteProductController = DeleteProductController;
     })(ProductControllers = Etsy.ProductControllers || (Etsy.ProductControllers = {}));
 })(Etsy || (Etsy = {}));
-//# sourceMappingURL=ProductsController.js.map
+var Etsy;
+(function (Etsy) {
+    var ProductServices;
+    (function (ProductServices) {
+        var ProductService = (function () {
+            function ProductService($resource) {
+                this.ProductService = $resource('/api/products/:id');
+            }
+            ProductService.prototype.listProducts = function () {
+                return this.ProductService.query();
+            };
+            ProductService.prototype.save = function (product) {
+                return this.ProductService.save(product).$promise;
+            };
+            ProductService.prototype.getProduct = function (id) {
+                return this.ProductService.get({ id: id });
+            };
+            ProductService.prototype.deleteProduct = function (id) {
+                return this.ProductService.delete({ id: id }).$promise;
+            };
+            return ProductService;
+        })();
+        ProductServices.ProductService = ProductService;
+        angular.module('EtsyApp').service('productService', ProductService);
+    })(ProductServices = Etsy.ProductServices || (Etsy.ProductServices = {}));
+})(Etsy || (Etsy = {}));
+//# sourceMappingURL=master.js.map

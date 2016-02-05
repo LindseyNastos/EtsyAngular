@@ -12,14 +12,37 @@
 
     <ng-view></ng-view>
 
+    <div class="container" id="footerContainer">
+        <div class="row">
+            <div class="col-md-offset-2">
+                <div class="text-center img-responsive" id="subscribeDiv">
+                    <h3>Get top trends and fresh editors' picks in your inbox with Etsy Finds.</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-3">
+                                <input class="form-control" id="subscribeEnterEmail" type="text" placeholder="Enter your email" />
+                            </div>
+                            <div class="col-md-3">
+                                <input class="form-control btn" id="subscribeBtn" type="submit" value="Subscribe" />
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-route.min.js"></script>
     <script src="~/Scripts/angular-resource.min.js"></script>
-    <script src="../../Angular/EtsyApp.js"></script>
+    <script src="~/master.js"></script>
+    @*<script src="../../Angular/EtsyApp.js"></script>
     <script src="~/Angular/AJSServices/ProductServices.js"></script>
     <script src="~/Angular/AJSControllers/MainController.js"></script>
-    <script src="../../Angular/AJSControllers/ProductsController.js"></script>
+    <script src="../../Angular/AJSControllers/ProductsController.js"></script>*@
 </body>
 </html>

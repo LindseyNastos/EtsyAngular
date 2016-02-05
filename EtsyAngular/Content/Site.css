@@ -1,5 +1,6 @@
 ﻿body {
     padding-bottom: 20px;
+     background-color: #efefeb;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -196,11 +197,112 @@ display: block;
 }
 
 #shopFeatureThumbnails li  {
-    border-radius: 3px;
-    border: 1px solid #ececec;
     float: left;
-    margin-right: 6px;
+    margin-right: 9px;
 }
+
+        #shopFeatureThumbnails li a img{
+            border: 3px solid #fff;
+            border-radius: 3px;
+            height: 82px;
+            width: 82px;
+            margin-top:0px;
+        }
+
+    #shopFeatureThumbnails li a div {
+        background-color:#fff;
+        border: 3px solid #fff;
+        border-radius: 3px;
+        height: 82px;
+        width: 82px;
+        margin-top:0px;
+    }
+
+#lastFeatureSquare:hover {
+    text-decoration:none;
+}
+
+#lastFeatureSquare div:hover {
+    background-color: #cce9f0;
+}
+
+#featureNumProducts {
+    color: #0192B5;
+    display: block;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#featureItemsWord {
+    display: block;
+    font-size:12px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+    .section h2 {
+        font-size: 32px;
+        font-weight: 500;
+        text-align: center;
+        color: #333;
+        font-weight:600;
+        font-family: Georgia, serif;
+        text-shadow: 0 2px 1px rgba(255, 255, 255, 0.8);
+        line-height: 1.2;
+        vertical-align: baseline;
+    }
+
+#footerContainer {
+    margin: 28px -10px 0 -10px;
+    padding: 0;
+    font-size: 13px;
+    line-height: 18px;
+    clear: left;
+    display: block;
+}
+    #subscribeDiv {
+        border: #dadada 7px solid;
+        border-radius: 5px;
+        width: 980px;
+        height:102px;
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+        padding:20px;
+    }
+
+    #footerContainer div h3 {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+#subscribeBtn {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #34A8C4;
+    border-color:rgba(0, 0, 0, 0.1);
+    color:white;
+    height:34px;
+    width:104px; 
+}
+
+#subscribeEnterEmail {
+    height:34px;
+    width:250px;
+}
+
+
+
+
 /*
 To make image resize with window:    
 .test {
