@@ -209,6 +209,10 @@ display: block;
             margin-top:0px;
         }
 
+    #shopFeatureThumbnails li a:hover img {
+            opacity: 0.90;
+    }
+
     #shopFeatureThumbnails li a div {
         background-color:#fff;
         border: 3px solid #fff;
@@ -294,6 +298,9 @@ display: block;
     height:34px;
     width:104px; 
 }
+    #subscribeBtn:hover {
+        background-color: #3cb1cb;
+    }
 
 #subscribeEnterEmail {
     height:34px;
