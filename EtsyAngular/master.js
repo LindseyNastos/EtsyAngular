@@ -1,24 +1,27 @@
 /// <reference path="../scripts/typings/angularjs/angular.d.ts" />
 var Etsy;
 (function (Etsy) {
-    angular.module("EtsyApp", ['ngRoute', 'ngResource']).config(function ($routeProvider, $locationProvider) {
-        $routeProvider
-            .when('/', {
+    angular.module("EtsyApp", ['ngResource', 'ui.router']).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
+            .state('home', {
+            url: '/',
             templateUrl: "Angular/AJSViews/Home.html",
             controller: Etsy.MainController.HomeController,
             controllerAs: 'controller'
         })
-            .when('/list', {
+            .state('list', {
+            url: '/list',
             templateUrl: "Angular/AJSViews/GETRIDOFTHISVIEW.html",
             controller: Etsy.ProductControllers.ProductListController,
             controllerAs: 'controller'
         })
-            .when('/details/:id', {
+            .state('details', {
+            url: '/details/:id',
             templateUrl: "Angular/AJSViews/User/Details.html",
             controller: Etsy.ProductControllers.ProductDetailsController,
             controllerAs: 'controller'
-        })
-            .otherwise({ redirectTo: '/' });
+        });
         $locationProvider.html5Mode(true);
     });
 })(Etsy || (Etsy = {}));
@@ -47,8 +50,12 @@ var Etsy;
         ProductControllers.ProductDetailsController = ProductDetailsController;
         var ProductListController = (function () {
             function ProductListController(productService) {
+                var _this = this;
                 this.productService = productService;
-                this.products = productService.listProducts();
+                this.productService.listProducts().then(function (results) {
+                    _this.products = results;
+                    debugger;
+                });
             }
             return ProductListController;
         })();
@@ -108,7 +115,7 @@ var Etsy;
                 this.ProductService = $resource('/api/products/:id');
             }
             ProductService.prototype.listProducts = function () {
-                return this.ProductService.query();
+                return this.ProductService.query().$promise;
             };
             ProductService.prototype.save = function (product) {
                 return this.ProductService.save(product).$promise;

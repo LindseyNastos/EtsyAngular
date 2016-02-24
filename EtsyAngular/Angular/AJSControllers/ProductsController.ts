@@ -6,7 +6,10 @@
         public products;
 
         constructor(private productService: Etsy.ProductServices.ProductService) {
-            this.products = productService.listProducts();
+            this.productService.listProducts().then((results) => {
+                this.products = results;
+                debugger;
+            });
         }
     }
 
