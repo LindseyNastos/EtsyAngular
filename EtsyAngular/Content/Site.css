@@ -1,6 +1,6 @@
 ﻿body {
     padding-bottom: 20px;
-     background-color: #efefeb;
+    background-color: #efefeb;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,7 +24,7 @@ textarea {
     font-family: serif;
     color: #f45800;
     font-size: 40px;
-    font-weight:600;
+    font-weight: 600;
 }
 
 #navbarSearch {
@@ -41,17 +41,17 @@ textarea {
     font-size: 14px;
     font-weight: 600;
     background-color: #34A8C4;
-    border-color:rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
     left: -7px;
 }
 
     #searchBtn:hover {
-         background-color: #3cb1cb;
+        background-color: #3cb1cb;
     }
 
 #bottomNavLinks > li > div > a {
     color: #888;
-    z-index:12;
+    z-index: 12;
 }
 
 #bottomNavLinks > li {
@@ -60,20 +60,20 @@ textarea {
 }
 
     #bottomNavLinks > li > div > a:hover {
-        background-color:transparent;
-        text-decoration:none;
+        background-color: transparent;
+        text-decoration: none;
         color: #555;
         border-bottom: 3px solid #f45800;
-        z-index:10;
+        z-index: 10;
     }
 
     #bottomNavLinks > li > div > a > div {
         height: 29px;
-        z-index:9;
+        z-index: 9;
     }
 
         #bottomNavLinks > li > div > a > div:hover {
-            border-bottom: 3px solid #f45800
+            border-bottom: 3px solid #f45800;
         }
 
 #bottomNav {
@@ -85,8 +85,8 @@ textarea {
 
 #vertLine {
     border-left: 1px solid #eee;
-    height:50px;
-    width:1px;
+    height: 50px;
+    width: 1px;
 }
 
 #navCart {
@@ -98,38 +98,53 @@ textarea {
     }
 
         #navCart > div > p {
-        color: #888;
-        font-size: 11px;
-    }
-
-#signInBtnPlacement {
-    top:-7px;
-}
+            color: #888;
+            font-size: 11px;
+        }
 
 #signInBtn {
-    color:#0192B5;
-    background-color:transparent;
-    border: 1px solid #0192B5; 
+    color: #0192B5;
+    background-color: transparent;
+    border: 1px solid #0192B5;
+    top: 2px;
+    margin-right:10px;
 }
 
     #signInBtn:hover {
-            background-color:#F0FBFD;
+        background-color: #F0FBFD;
     }
 
 #mainNavbar {
-    height:30px;
+    height: 30px;
 }
 
 .navLinksDown {
-    padding-top:15px;
+    padding-top: 15px;
 }
 
 .dropdown:hover .dropdown-menu {
-display: block;
+    display: block;
+    border-radius:0px;
 }
 
+
 .bottomNavDrops {
-    top:27px;
+    top: 27px;
+    height:450px;
+    width:950px;
+}
+
+.bottomNavDrops li {
+    color: #333;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    list-style:none;
+}
+
+
+.dropDownSections {
+    height:100%;
+    border-right:1px solid #e1e3df;
 }
 
 #mainPagePic {
@@ -142,23 +157,23 @@ display: block;
 }
 
 
-#mainPagePic .container div div h1 {
-    color: white;
-    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
-    font-family: Georgia, serif;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 1.3em;
-    padding: 90px 0 20px 0px;
-    width: 560px;
-}
+    #mainPagePic .container div div h1 {
+        color: white;
+        text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+        font-family: Georgia, serif;
+        font-size: 42px;
+        font-weight: 500;
+        line-height: 1.3em;
+        padding: 90px 0 20px 0px;
+        width: 560px;
+    }
 
     #mainPagePic #shopFeatureWrap {
         background: #000;
         filter: alpha(opacity=40);
         background-color: rgba(0, 0, 0, 0.4);
         min-height: 100px;
-        margin-top: 51px;
+        margin-top: 52px;
     }
 
 #shopFeatureContainer {
@@ -176,7 +191,7 @@ display: block;
         float: left;
         height: 60px;
         width: 60px;
-        margin-top: 12px;;
+        margin-top: 12px;
         background: transparent;
     }
 
@@ -188,42 +203,52 @@ display: block;
 #sellerName {
     float: left;
     font-family: Georgia, serif;
-    color:white;
-    font-weight:500;
-    font-size:14px;
-    margin-left:8px;
-    text-align:left;
-    margin-top:20px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 8px;
+    text-align: left;
+    margin-top: 20px;
 }
 
-#shopFeatureThumbnails li  {
+#shopFeatureThumbnails li {
     float: left;
     margin-right: 9px;
 }
 
-        #shopFeatureThumbnails li a img{
-            border: 3px solid #fff;
-            border-radius: 3px;
-            height: 82px;
-            width: 82px;
-            margin-top:0px;
-        }
-
-    #shopFeatureThumbnails li a:hover img {
-            opacity: 0.90;
+    #shopFeatureThumbnails li a img {
+        border-radius: 0px;
+        height: 76px;
+        width: 76px;
+        opacity: 0.94;
+        margin-top:3px;
+        margin-left:3px;
+        z-index:10;
     }
 
-    #shopFeatureThumbnails li a div {
-        background-color:#fff;
+    #shopFeatureThumbnails li a:hover img {
+        opacity: 1;
+    }
+
+.featureThumbnailDiv {
+    background-color:#fff;
+    height: 82px;
+    width: 82px;
+    border-radius: 3px;
+    z-index:5;
+}
+
+    #numItemsDiv {
+        background-color: #fff;
         border: 3px solid #fff;
         border-radius: 3px;
         height: 82px;
         width: 82px;
-        margin-top:0px;
+        margin-top: 0px;
     }
 
 #lastFeatureSquare:hover {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 #lastFeatureSquare div:hover {
@@ -240,7 +265,7 @@ display: block;
 
 #featureItemsWord {
     display: block;
-    font-size:12px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 10px;
     text-align: center;
@@ -256,7 +281,7 @@ display: block;
         font-weight: 500;
         text-align: center;
         color: #333;
-        font-weight:600;
+        font-weight: 600;
         font-family: Georgia, serif;
         text-shadow: 0 2px 1px rgba(255, 255, 255, 0.8);
         line-height: 1.2;
@@ -264,47 +289,137 @@ display: block;
     }
 
 #footerContainer {
-    margin: 28px -10px 0 -10px;
-    padding: 0;
     font-size: 13px;
     line-height: 18px;
     clear: left;
     display: block;
+    border-top: 1px solid #e1e3df;
 }
-    #subscribeDiv {
-        border: #dadada 7px solid;
-        border-radius: 5px;
-        width: 980px;
-        height:102px;
-        margin-left:auto;
-        margin-right:auto;
-        display:block;
-        padding:20px;
+
+    #footerContainer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 14px;
+    }
+    #footerContainer li {
+        margin-top: 8px;
+
     }
 
-    #footerContainer div h3 {
-
-        font-family: Arial, Helvetica, sans-serif;
+    #footerContainer li a {
+        color: #0192b5;
         font-size: 13px;
-        padding-bottom: 10px;
+        line-height: 18px;
+        font-family: Arial,Helvetica,sans-serif;
     }
 
-#subscribeBtn {
-    font-size: 14px;
-    font-weight: 600;
+
+#openShopBtn {
+    padding: 4px 11px;
+    font-size: 13px;
     background-color: #34A8C4;
-    border-color:rgba(0, 0, 0, 0.1);
-    color:white;
-    height:34px;
-    width:104px; 
+    border-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 7px;
 }
-    #subscribeBtn:hover {
+
+    #openShopBtn:hover {
         background-color: #3cb1cb;
     }
 
-#subscribeEnterEmail {
-    height:34px;
-    width:250px;
+#footerContainer h4 {
+    color: #333;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+#footerLinks a {
+    color: #666;
+    font-size:12px;
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 0 7px;
+}
+
+#footerLinks span {
+    color: #999;
+    font-size:12px;
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 0 7px;
+}
+.borderBottom {
+    border-bottom: 1px solid #e1e3df;
+    padding-bottom:20px;
+}
+
+#footerChoiceBtns button {
+    font-size:12px;
+    color: #666;
+    background-color:transparent;
+    font-family: Arial,Helvetica,sans-serif;
+    height:32px;
+    border: 1px solid #e1e3df;
+    border-radius:3px;
+    padding:1px 9px;
+}
+#footerChoiceBtns button:hover {
+    background-color: #cce6ff;
+    color: #0192b5;
+}
+#helpBtn {
+    font-size:15px;
+    color: #555;
+    background-color:transparent;
+    font-family: Arial,Helvetica,sans-serif;
+    height:32px;
+    width:172px;
+    margin-left:28px;
+    font-weight:600;
+    border-radius:3px;
+    border: 1px solid #e1e3df;
+}
+
+    #helpBtn:hover {
+    border-color:rgba(0, 0, 0, 0.15);
+    }
+
+#footerBtns {
+    margin-top:25px;
+}
+
+.footerDivs {
+    margin-bottom:16px;
+}
+
+#dropdownOne {
+    left:-20px;
+}
+
+#dropdownTwo {
+    left:-185px;
+}
+
+#dropdownThree {
+    left:-253px;
+}
+
+#dropdownFour {
+    left:-414px;
+}
+
+#dropdownFive {
+    left:-497px;
+}
+
+#dropdownSix {
+    left:-606px;
+}
+
+#dropdownSeven {
+    left:-718px;
+}
+
+#dropdownEight {
+    left:-814px;
 }
 
 
