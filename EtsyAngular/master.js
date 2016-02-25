@@ -52,8 +52,10 @@ var Etsy;
             function ProductListController(productService) {
                 var _this = this;
                 this.productService = productService;
+                this.products = [];
                 this.productService.listProducts().then(function (results) {
                     _this.products = results;
+                    console.log(_this.products);
                     debugger;
                 });
             }

@@ -145,6 +145,7 @@ textarea {
 .dropDownSections {
     height:100%;
     border-right:1px solid #e1e3df;
+    margin-left:0px;
 }
 
 #mainPagePic {
@@ -422,6 +423,18 @@ textarea {
     left:-814px;
 }
 
+.categoryDropdownDiv li {
+    width:100%;
+    padding: 9px 0px 9px 0px;
+    display: block;
+    margin: 0px;
+    text-align: left;
+    background-color:transparent;
+}
+
+    .categoryDropdownDiv li:hover {
+        background-color: #cce6ff;
+    }
 
 
 

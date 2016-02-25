@@ -3,11 +3,12 @@
     export class ProductDetailsController { }
 
     export class ProductListController {
-        public products;
+        public products = [];
 
         constructor(private productService: Etsy.ProductServices.ProductService) {
             this.productService.listProducts().then((results) => {
                 this.products = results;
+                console.log(this.products);
                 debugger;
             });
         }
