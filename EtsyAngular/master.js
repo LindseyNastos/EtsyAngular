@@ -1,7 +1,8 @@
 /// <reference path="../scripts/typings/angularjs/angular.d.ts" />
 var Etsy;
 (function (Etsy) {
-    angular.module("EtsyApp", ['ngResource', 'ui.router']).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    var EtsyApp = angular.module("EtsyApp", ['ngResource', 'ui.router']);
+    EtsyApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {

@@ -1,8 +1,9 @@
 ﻿/// <reference path="../scripts/typings/angularjs/angular.d.ts" />
 
 namespace Etsy {
+    var EtsyApp = angular.module("EtsyApp", ['ngResource', 'ui.router']);
 
-    angular.module("EtsyApp", ['ngResource', 'ui.router']).config(($stateProvider, $urlRouterProvider, $locationProvider: ng.ILocationProvider) => {
+    EtsyApp.config(($stateProvider, $urlRouterProvider, $locationProvider: ng.ILocationProvider) => {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
